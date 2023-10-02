@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leitor de Código de Barras para NF</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <script src="jspdf.min.js"></script>
+    <link rel="icon" href="./images/Favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Leitor de Código de Barras para NF</h1>
+      </header>
+
+      <main>
+        <div class="my-form">
+          <fieldset>
+            <div class="coluns-three">
+              <div class="input-wrapper">
+                <label>Data e Hora Atuais:</label>
+                <input type="text" id="dataHoraAtual" readonly />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-begin">Das</label>
+                <input type="time" id="event-begin" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-end">Ate</label>
+                <input type="time" id="event-end" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="transportadora">Transportadora</label>
+              <select id="transportadora" required>
+                <option value="Mandae">Mandae</option>
+                <option value="Correrios">Correios</option>
+                <option value="Jamef">Jamef</option>
+                <option value="Azul">Azul</option>
+              </select>
+              <!-- <p>Nome da Transportadora:</p>
+              <input type="text" id="transportadora" required /> -->
+            </div>
+            <div class="input-wrapper">
+              <label>Por favor, escaneie o código de barras da NF:</label>
+              <input
+                type="text"
+                id="codigoDeBarras"
+                onkeydown="if(event.keyCode === 13) lerCodigoDeBarras()"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              Total de Notas Fiscais Lidas:
+              <span id="totalNotasFiscais">0</span>
+            </legend>
+
+            <h2>Dados das Notas Fiscais:</h2>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Código de Barras da NF</th>
+                    <th>Transportadora</th>
+                    <th>Volumes</th>
+                    <th>Opções</th>
+                  </tr>
+                </thead>
+                <tbody id="tabelaNFs"></tbody>
+              </table>
+            </div>
+          </fieldset>
+        </div>
+      </main>
+      <footer>
+        <button class="button" onclick="exportarParaXLS()">
+          Salvar em XLS
+        </button>
+        <button class="button" onclick="exportarParaPDF()">
+          Salvar em PDF
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>
