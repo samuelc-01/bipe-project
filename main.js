@@ -15,6 +15,8 @@ function lerCodigoDeBarras() {
   const codigoDeBarrasInput = document.getElementById("codigoDeBarras");
   const codigoLido = codigoDeBarrasInput.value.trim();
   const transportadora = transportadoraInput.value.trim();
+  document.getElementById("contador-de-caracter").textContent =
+    codigoLido.length;
 
   if (transportadora === "") {
     alert(
@@ -23,6 +25,13 @@ function lerCodigoDeBarras() {
     return;
   }
 
+  if (codigoLido.length < 44) {
+    alert(
+      "Por favor preecha o campo da nota fiscal com uma sequencia de 44 numeros para que o sistema funcione de maneiro correta, TENTE NOVAMENTE :)"
+    );
+    codigoDeBarrasInput.value = "";
+    return;
+  }
   if (codigoLido) {
     const numeroVolume = codigosDeBarrasLidos.has(codigoLido)
       ? codigosDeBarrasLidos.get(codigoLido) + 1
