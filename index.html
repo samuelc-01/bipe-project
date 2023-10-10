@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leitor de Código de Barras para NF</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="./main.js" defer></script>
-    <script src="jspdf.min.js"></script>
     <link rel="icon" href="./images/Favicon.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="container">
+    <div class="container hidden">
       <header>
         <h1>Leitor de Código de Barras para NF</h1>
       </header>
@@ -90,6 +90,29 @@
           Salvar em PDF
         </button>
       </footer>
+    </div>
+
+    <div class="login-page">
+      <div class="login-form">
+        <h1>FACA O SEU LOGIN <span>:|</span></h1>
+
+        <fieldset>
+          <div class="input-wrapper">
+            <label>usuario</label>
+            <input type="text" id="userName" />
+          </div>
+
+          <div class="input-wrapper">
+            <label>senha</label>
+            <input type="password" id="password" />
+          </div>
+        </fieldset>
+
+        <button id="button">
+          <!-- onclick="validation(userName, password)" -->
+          Entrar
+        </button>
+      </div>
     </div>
   </body>
 </html>

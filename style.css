@@ -50,12 +50,13 @@ header p {
   line-height: 26px;
 }
 
-main .my-form {
+.my-form {
   margin-top: 38px;
   background: #fafafc;
   border-radius: 8px 8px 0px 0px;
-  padding: 70px;
+  padding: 80px;
   width: 1000px;
+  margin: 0 auto;
 
   /* Defina a altura mínima e ative a rolagem vertical */
   min-height: 300px;
@@ -239,24 +240,11 @@ footer {
   border-radius: 0 0 8px 8px;
 }
 
-footer .button {
-  height: 56px;
-  color: white;
-  border-radius: 8px;
-  background: #ff9100c8;
-  border: none;
-  padding: 10px;
-  margin-bottom: 10px;
-
-  font-family: "Archivo", sans-serif;
-  cursor: pointer;
-}
-
 .button {
   height: 56px;
   color: white;
   border-radius: 8px;
-  background: #ff9100c8;
+  background: #6c4a00;
   border: none;
   padding: 10px;
   margin-bottom: 10px;
@@ -266,5 +254,45 @@ footer .button {
 }
 
 footer .button:hover {
-  background: #b97b00;
+  background: #8e6c22;
+}
+
+/* login Page */
+
+.login-form {
+  margin-top: 60px;
+  background: #fafafc;
+  border-radius: 8px 8px 0px 0px;
+  padding: 50px;
+  width: 500px;
+  margin: 0 auto;
+
+  /* Defina a altura mínima e ative a rolagem vertical */
+  min-height: 300px;
+  overflow-y: auto;
+
+  /* Remova a altura fixa para permitir o crescimento dinâmico */
+  /* height: 1200px; */
+}
+
+#button {
+  height: 56px;
+  width: 400px;
+  color: white;
+  border-radius: 8px;
+  background: #6c4a00;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  font-family: "Archivo", sans-serif;
+  cursor: pointer;
+}
+
+#button:hover {
+  background: #8e6c22;
+}
+
+.hidden {
+  display: none;
 }
