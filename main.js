@@ -198,3 +198,5 @@ function removerCodigoDeBarras(codigoLido) {
     }
   }
 }
+
+// CREATE MODULE ADD
