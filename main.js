@@ -200,3 +200,5 @@ function removerCodigoDeBarras(codigoLido) {
 }
 
 // CREATE MODULE ADD
+// i'm making test in the extension vscode for i was a use him in my project.
+// commit import **bi*bi*bi**
