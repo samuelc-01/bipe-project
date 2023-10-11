@@ -8,12 +8,35 @@ const userNameInput = document.getElementById("userName");
 const passwordInput = document.getElementById("password");
 const loginPage = document.querySelector(".login-page");
 
-loginPage.addEventListener("submit", function (event) {
-  event.preventDefault(); // Evita que o formulário seja enviado
-  const userName = userNameInput.value;
-  const password = passwordInput.value;
-  validation(userName, password);
-});
+class User {
+  constructor(username, password) {
+    this.username = username;
+    this.password = password;
+  }
+}
+
+class People {
+  constructor() {
+    this.people = [];
+  }
+
+  addPerson(username, password) {
+    if (this.people.length < 5) {
+      const user = new User(username, password);
+      this.people.push(user);
+    }
+  }
+}
+
+const admManager = new People();
+
+// Adicionar 5 pessoas com nomes e senhas
+admManager.addPerson("balaTensa", "miraBamba");
+admManager.addPerson("Pessoa2", "senha2");
+admManager.addPerson("Pessoa3", "senha3");
+admManager.addPerson("Pessoa4", "senha4");
+admManager.addPerson("Pessoa5", "senha5");
+// console.log(admManager.people[0].password);
 
 function validation(userName, password) {
   if (userName === "admin" && password === "1234") {
@@ -175,51 +198,3 @@ function removerCodigoDeBarras(codigoLido) {
     }
   }
 }
-
-// class User {
-//   constructor(username, password) {
-//     this.username = username;
-//     this.password = password;
-//   }
-// }
-
-// class Person {
-//   constructor() {
-//     this.people = [];
-//   }
-//   addPerson(username, password) {
-//     if (this.people.length < 5) {
-//       const user = new User(username, password);
-//       this.people.push(user);
-//     }
-//   }
-// }
-
-// // const tonin = new Person();
-
-// const personManager = new Person();
-
-// // Adicionar 5 pessoas com nomes e senhas
-// personManager.addPerson("Pessoa1", "senha1");
-// personManager.addPerson("Pessoa2", "senha2");
-// personManager.addPerson("Pessoa3", "senha3");
-// personManager.addPerson("Pessoa4", "senha4");
-// personManager.addPerson("Pessoa5", "senha5");
-
-// console.log(personManager.people[1]);
-// // function loopTest(pessoaManager) {
-// //   const array = pessoaManager;
-
-// //   forEach((array) => {
-// //     console.log(pessoaManager.pessoas[i]);
-// //   });
-// // }
-
-// // console.log(loopTest(pessoaManager));
-
-// // function isValue(pessoaManager) {
-
-// //   // const arrayUser = pessoaManager.pessoas[0].user;
-
-// //   if(pessoaManager.pessoas[i].user && pessoaManager.pessoas[i].password)
-// // }
