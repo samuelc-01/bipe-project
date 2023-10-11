@@ -202,3 +202,9 @@ function removerCodigoDeBarras(codigoLido) {
 // CREATE MODULE ADD
 // i'm making test in the extension vscode for i was a use him in my project.
 // commit import **bi*bi*bi**
+// create new event for test, now i'm make description for how use the extension in vscode
+// * first checked your repositoies in github, after check your main branch in your computer.
+// * second if you has a question, open your terminal and press "git status";
+// * third checked your branch main in your computer;
+// * four is the most IMPORT, now in your computer, select the change(commits);
+// * fifth, write a description message for your commit and after puclish your repository;
