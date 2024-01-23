@@ -257,6 +257,24 @@ footer .button:hover {
   background: #8e6c22;
 }
 
+/* Estilo para a classe "codigo-barras" */
+th .codigo-barras {
+  background-color: #ffff00; /* Cor de fundo amarela */
+  font-weight: bold;
+}
+
+/* Estilo para a classe "transportadora" */
+th .transportadora {
+  background-color: #00ff00; /* Cor de fundo verde */
+  font-weight: bold;
+}
+
+/* Estilo para a classe "volumes" */
+th .volumes {
+  background-color: #0000ff; /* Cor de fundo azul */
+  font-weight: bold;
+}
+
 /* login Page */
 
 .login-form {
